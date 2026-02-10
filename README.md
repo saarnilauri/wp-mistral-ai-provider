@@ -41,6 +41,10 @@ The ZIP is created at `dist/wp-mistral-ai-provider.zip` and includes `plugin.php
 This repository includes a GitHub Actions workflow at `.github/workflows/release-plugin-zip.yml`:
 
 - On tag pushes matching `v*`, it builds `dist/wp-mistral-ai-provider.zip`
+- For tagged releases, it derives the version from the tag (for example `v0.1.0` -> `0.1.0`) and validates committed metadata:
+  - `readme.txt` `Stable tag` must match the tag version
+  - `plugin.php` `Version` must match the tag version
+- If versions do not match, the workflow fails
 - It uploads the ZIP as a workflow artifact
 - It attaches the ZIP to the GitHub release for that tag
 
