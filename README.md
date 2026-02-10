@@ -15,12 +15,34 @@ A Mistral provider for the [PHP AI Client](https://github.com/WordPress/php-ai-c
 composer require saarnilauri/wp-mistral-ai-provider
 ```
 
+The Composer distribution is intended for library usage and excludes `plugin.php`.
+
 ### As a WordPress Plugin
 
-1. Download the plugin files
-2. Upload to `/wp-content/plugins/wp-mistral-ai-provider/`
+1. Download `wp-mistral-ai-provider.zip` from [GitHub Releases](https://github.com/saarnilauri/wp-mistral-ai-provider/releases) (do not use GitHub "Source code" archives)
+2. Upload the ZIP in WordPress admin via Plugins > Add New Plugin > Upload Plugin
 3. Ensure the PHP AI Client plugin is installed and activated
 4. Activate the plugin through the WordPress admin
+
+## Building the Plugin ZIP
+
+Build a distributable plugin archive locally:
+
+```bash
+make dist
+# or:
+./scripts/build-plugin-zip.sh
+```
+
+The ZIP is created at `dist/wp-mistral-ai-provider.zip` and includes `plugin.php`.
+
+## Release Workflow
+
+This repository includes a GitHub Actions workflow at `.github/workflows/release-plugin-zip.yml`:
+
+- On tag pushes matching `v*`, it builds `dist/wp-mistral-ai-provider.zip`
+- It uploads the ZIP as a workflow artifact
+- It attaches the ZIP to the GitHub release for that tag
 
 ## Usage
 
