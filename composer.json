@@ -38,7 +38,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "WordPress\\MistralAiProvider\\": "src/"
+            "WpMistralProvider\\": "src/"
         }
     },
     "config": {
