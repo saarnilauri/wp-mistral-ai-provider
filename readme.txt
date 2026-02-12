@@ -3,7 +3,7 @@ Contributors: WordPress AI Team
 Tags: ai, mistral, machine-learning, artificial-intelligence
 Requires at least: 6.9
 Tested up to: 6.9
-Stable tag: 0.1.3
+Stable tag: 0.2.0
 Requires PHP: 7.4
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -49,14 +49,18 @@ No, this plugin requires the PHP AI Client plugin to be installed and activated.
 
 == Changelog ==
 
+= 0.2.0 =
+* Rewrite the plugin to use better naming that reflects that this is independent product and it is not official Mistral product.
+* Add unit and integration tests
+
+= 0.1.1 - 0.1.3 =
+Improve package / plugin distribution
+
 = 0.1.0 =
 * Initial release
 * Support for Mistral text generation models
 * Function calling support for compatible models
 * Vision input support for compatible models
-
-= 0.1.1 - 0.1.3 =
-Improve package / plugin distribution
 
 == Upgrade Notice ==
 
